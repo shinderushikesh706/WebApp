@@ -14,5 +14,5 @@ def login(request):
         return render(request, 'login.html')
 
 def sign_up(request):
-
+    print('test')
     return render(request, 'sign_up.html')
