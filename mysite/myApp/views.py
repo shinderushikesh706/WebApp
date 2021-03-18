@@ -24,7 +24,6 @@ def login(request):
 
 ensure_csrf_cookie(login)
 
-
 def sign_up(request):
     if request.method == 'GET':
         return render(request, 'sign_up.html')
@@ -33,6 +32,14 @@ def sign_up(request):
         print('test')
         return render(request, 'login.html')
 
+ensure_csrf_cookie(sign_up)
+
+
+
 def contact_us(request):
-    print('we are at contact')
+
     return render(request, 'contact_us.html')
+
+def about(request):
+
+    return render(request, 'about.html')
