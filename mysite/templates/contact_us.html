@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %} Contact Us {% endblock title %}</title>
 </head>
 <body>
+
+{% block body %}
 <section>
     <div id="home-row-two" class="row gutter-1-5 d-padding-top-4 d-padding-bottom-4 m-padding-top-2 m-padding-bottom-2">
                 <div class="stellar-background">
@@ -47,5 +51,7 @@
             </div>
 
 </section>
+{% endblock body %}
+
 </body>
 </html>
