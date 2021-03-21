@@ -1,49 +1,59 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 
 # Create your views here.
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib import messages
-
-from myApp.models import User, Contact
+from myApp.models import Contact
+from django.contrib.auth.models import User
 
 
 def index(request):
-
     return render(request, 'home.html')
 
 
 # return HttpResponse("Hello, world. You're at the My APP.")
 
-def login(request):
+def Userlogin(request):
     if request.method == 'GET':
         return render(request, 'login.html')
     if request.method == 'POST':
-
         # User.username.objects.all()
-        return render(request, 'home.html')
+        return redirect('/')
 
 
-ensure_csrf_cookie(login)
+ensure_csrf_cookie(Userlogin)
 
 
 def sign_up(request):
-    if request.method == 'GET':
-        return render(request, 'sign_up.html')
+
     if request.method == 'POST':
-        firstname = request.POST.get('firstname')
-        lastname = request.POST.get('lastname')
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        password1 = request.POST.get('password')
-        password2 = request.POST.get('password2')
+
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password']
+        password2 = request.POST['password2']
+
+        if password1 == password2:
+            if User.objects.filter(username=username).exists():
+                messages.success(request, 'this username ' + username + ' already taken')
+                return redirect('sign_up')
+            else:
+                user = User.objects.create_user(username=username, email=email, password=password1)
+                user.save()
+
+                messages.success(request, 'Welcome' + username + ', You have successfully created account')
+                return render(request, 'login.html')
+        else:
+            messages.success(request, 'Hey' + username + ', both password not matching')
+            return redirect('sign_up')
 
 
 
-        messages.success(request, 'Welcome'+username+', You have successfully created account')
-
-        return render(request, 'login.html')
-
+    else:
+        return render(request, 'sign_up.html')
 
 ensure_csrf_cookie(sign_up)
 
@@ -56,7 +66,7 @@ def contact_us(request):
 
         contact = Contact(name=name, email=email, message=message)
         contact.save()
-        messages.success(request, 'Hey '+name+' Thanks for Feedback')
+        messages.success(request, 'Hey ' + name + ' Thanks for Feedback')
 
     return render(request, 'contact_us.html')
 
