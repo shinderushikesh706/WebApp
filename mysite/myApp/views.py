@@ -1,3 +1,4 @@
+from django.contrib.auth import login
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -5,7 +6,7 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib import messages
 from myApp.models import Contact
-from django.contrib.auth.models import User
+from django.contrib.auth.models import auth, User
 
 
 def index(request):
@@ -15,45 +16,67 @@ def index(request):
 # return HttpResponse("Hello, world. You're at the My APP.")
 
 def Userlogin(request):
-    if request.method == 'GET':
-        return render(request, 'login.html')
-    if request.method == 'POST':
-        # User.username.objects.all()
+
+    if request.user.is_authenticated:
         return redirect('/')
+    else:
+        if request.method == 'POST':
+            username = request.POST['username']
+            password = request.POST['password']
+
+            user = auth.authenticate(username=username, password=password)
+
+            if user is not None:
+                login(request, user)
+                return redirect('/')
+            else:
+                messages.success(request, 'Hey ' + username + ' check your credentials')
+                return redirect('login')
+
+        else:
+            return render(request, 'login.html')
 
 
 ensure_csrf_cookie(Userlogin)
 
+def Userlogout(request):
+
+    auth.logout(request)
+
+    return redirect('/login')
+
 
 def sign_up(request):
 
-    if request.method == 'POST':
-
-        firstname = request.POST['firstname']
-        lastname = request.POST['lastname']
-        username = request.POST['username']
-        email = request.POST['email']
-        password1 = request.POST['password']
-        password2 = request.POST['password2']
-
-        if password1 == password2:
-            if User.objects.filter(username=username).exists():
-                messages.success(request, 'this username ' + username + ' already taken')
-                return redirect('sign_up')
-            else:
-                user = User.objects.create_user(username=username, email=email, password=password1)
-                user.save()
-
-                messages.success(request, 'Welcome' + username + ', You have successfully created account')
-                return render(request, 'login.html')
-        else:
-            messages.success(request, 'Hey' + username + ', both password not matching')
-            return redirect('sign_up')
-
-
-
+    if request.user.is_authenticated:
+        return redirect('/')
     else:
-        return render(request, 'sign_up.html')
+        if request.method == 'POST':
+
+#           firstname = request.POST['firstname']
+#           lastname = request.POST['lastname']
+            username = request.POST['username']
+            email = request.POST['email']
+            password1 = request.POST['password']
+            password2 = request.POST['password2']
+
+            if password1 == password2:
+                if User.objects.filter(username=username).exists():
+                    messages.success(request, 'this username ' + username + ' already taken')
+                    return redirect('sign_up')
+                else:
+                    user = User.objects.create_user(username=username, email=email, password=password1)
+                    user.save()
+
+                    messages.success(request, 'Welcome' + username + ', You have successfully created account')
+                    return render(request, 'login.html')
+            else:
+                messages.success(request, 'Hey' + username + ', both password not matching')
+                return redirect('sign_up')
+
+        else:
+            return render(request, 'sign_up.html')
+
 
 ensure_csrf_cookie(sign_up)
 
