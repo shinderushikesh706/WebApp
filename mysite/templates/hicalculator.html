@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <title>{% block title %} Health Insurance {% endblock title %}</title>
+
+</head>
+
+<body>
+{% block body %}
+<section class="text-gray-600 body-font">
+<div class="py-8 px-8 rounded-xl">
+  <form action="login" method="post" class="mt-6">
+                    {% csrf_token %}
+                    <div class="text-sm">
+
+                      <input type="radio">
+                      <span>Family Individual</span>
+
+                      <input type="radio">
+                      <span>Family Floater</span>
+
+                    </div>
+
+
+                    <button class="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Submit</button>
+  </form>
+</div>
+</section>
+{% endblock body %}
+</body>
+</html>

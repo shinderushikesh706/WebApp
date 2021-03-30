@@ -95,6 +95,9 @@ def contact_us(request):
 def healthinsurance(request):
     return render(request, 'healthinsurance.html')
 
+def hicalculator(request):
+
+    return render(request,'hicalculator.html')
 
 def about(request):
     return render(request, 'about.html')
