@@ -16,7 +16,6 @@ def index(request):
 # return HttpResponse("Hello, world. You're at the My APP.")
 
 def Userlogin(request):
-
     if request.user.is_authenticated:
         return redirect('/')
     else:
@@ -39,22 +38,21 @@ def Userlogin(request):
 
 ensure_csrf_cookie(Userlogin)
 
-def Userlogout(request):
 
+def Userlogout(request):
     auth.logout(request)
 
     return redirect('/login')
 
 
 def sign_up(request):
-
     if request.user.is_authenticated:
         return redirect('/')
     else:
         if request.method == 'POST':
 
-#           firstname = request.POST['firstname']
-#           lastname = request.POST['lastname']
+            #           firstname = request.POST['firstname']
+            #           lastname = request.POST['lastname']
             username = request.POST['username']
             email = request.POST['email']
             password1 = request.POST['password']
@@ -92,6 +90,10 @@ def contact_us(request):
         messages.success(request, 'Hey ' + name + ' Thanks for Feedback')
 
     return render(request, 'contact_us.html')
+
+
+def healthinsurance(request):
+    return render(request, 'healthinsurance.html')
 
 
 def about(request):
