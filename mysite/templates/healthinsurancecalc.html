@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Health Insurance {% endblock title %}</title>
+
+</head>
+
+<body>
+{% block body %}
+<section>
+
+    <div id="trsubvisiblegrid" class="col-md-12" style="margin-bottom: unset !important;">
+                            <div id="personal" role="tabpanel" class="tab-pane active">
+                                <div style="overflow: auto; width: auto !important;">
+                                    <div>
+	<table cellspacing="2" cellpadding="5" rules="all" id="gvTermComparison" style="border-color:LightGrey;border-width:0px;border-style:Solid;width:100%;">
+		<tbody><tr style="color:#666666;background-color:#E9E9E9;height:60px;">
+			<th align="center" scope="col" style="width:20%;">Company</th><th align="center" scope="col" style="width:40%;">Product Name</th><th align="center" scope="col" style="width:15%;">Annual Premium</th><th align="center" scope="col">Description</th><th align="center" scope="col" style="width:13%;">Interested In</th>
+		</tr><tr style="color:Black;background-color:White;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_0" src="CompanyLogo/Universal%20Sompo.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_0">Universal Corona Kavach 3.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_0">307.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_0" href="javascript:__doPostBack('gvTermComparison$ctl02$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_0" href="javascript:__doPostBack('gvTermComparison$ctl02$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_0" href="javascript:__doPostBack('gvTermComparison$ctl02$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_0" href="javascript:__doPostBack('gvTermComparison$ctl02$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_0" type="checkbox" name="gvTermComparison$ctl02$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:#E9E9E9;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_1" src="CompanyLogo/NAtional.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_1">National Corona Kavach 3.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_1">360.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_1" href="javascript:__doPostBack('gvTermComparison$ctl03$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_1" href="javascript:__doPostBack('gvTermComparison$ctl03$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_1" href="javascript:__doPostBack('gvTermComparison$ctl03$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_1" href="javascript:__doPostBack('gvTermComparison$ctl03$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_1" type="checkbox" name="gvTermComparison$ctl03$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:White;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_2" src="CompanyLogo/United%20India.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_2">United India Corona Kavach 3.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_2">369.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_2" href="javascript:__doPostBack('gvTermComparison$ctl04$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_2" href="javascript:__doPostBack('gvTermComparison$ctl04$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_2" href="javascript:__doPostBack('gvTermComparison$ctl04$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_2" href="javascript:__doPostBack('gvTermComparison$ctl04$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_2" type="checkbox" name="gvTermComparison$ctl04$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:#E9E9E9;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_3" src="CompanyLogo/Future%20Generally.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_3">Future Generali Corona Kavach 3.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_3">373.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_3" href="javascript:__doPostBack('gvTermComparison$ctl05$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_3" href="javascript:__doPostBack('gvTermComparison$ctl05$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_3" href="javascript:__doPostBack('gvTermComparison$ctl05$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_3" href="javascript:__doPostBack('gvTermComparison$ctl05$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_3" type="checkbox" name="gvTermComparison$ctl05$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:White;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_4" src="CompanyLogo/Oriental.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_4">Oriental Corona Kavach 3.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_4">433.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_4" href="javascript:__doPostBack('gvTermComparison$ctl06$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_4" href="javascript:__doPostBack('gvTermComparison$ctl06$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_4" href="javascript:__doPostBack('gvTermComparison$ctl06$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_4" href="javascript:__doPostBack('gvTermComparison$ctl06$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_4" type="checkbox" name="gvTermComparison$ctl06$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:#E9E9E9;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_5" src="CompanyLogo/Future%20Generally.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_5">Future Generali Corona Kavach 6.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_5">470.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_5" href="javascript:__doPostBack('gvTermComparison$ctl07$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_5" href="javascript:__doPostBack('gvTermComparison$ctl07$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_5" href="javascript:__doPostBack('gvTermComparison$ctl07$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_5" href="javascript:__doPostBack('gvTermComparison$ctl07$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_5" type="checkbox" name="gvTermComparison$ctl07$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:White;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_6" src="CompanyLogo/NAtional.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_6">National Corona Kavach 6.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_6">525.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_6" href="javascript:__doPostBack('gvTermComparison$ctl08$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_6" href="javascript:__doPostBack('gvTermComparison$ctl08$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_6" href="javascript:__doPostBack('gvTermComparison$ctl08$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_6" href="javascript:__doPostBack('gvTermComparison$ctl08$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_6" type="checkbox" name="gvTermComparison$ctl08$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:#E9E9E9;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_7" src="CompanyLogo/HDFC%20Ergo.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_7">HDFC Ergo Corona Kavach 3.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_7">555.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_7" href="javascript:__doPostBack('gvTermComparison$ctl09$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_7" href="javascript:__doPostBack('gvTermComparison$ctl09$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_7" href="javascript:__doPostBack('gvTermComparison$ctl09$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_7" href="javascript:__doPostBack('gvTermComparison$ctl09$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_7" type="checkbox" name="gvTermComparison$ctl09$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:White;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_8" src="CompanyLogo/Appolo.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_8">HDFC Ergo Health Corona Kavach 3.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_8">555.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_8" href="javascript:__doPostBack('gvTermComparison$ctl10$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_8" href="javascript:__doPostBack('gvTermComparison$ctl10$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_8" href="javascript:__doPostBack('gvTermComparison$ctl10$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_8" href="javascript:__doPostBack('gvTermComparison$ctl10$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_8" type="checkbox" name="gvTermComparison$ctl10$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr style="color:Black;background-color:#E9E9E9;border-color:LightGrey;border-width:2px;border-style:Solid;height:100px;">
+			<td align="center">
+
+                                                    <img id="gvTermComparison_Img1_9" src="CompanyLogo/Future%20Generally.jpg" style="height:60px;width:155px;">
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblGIProductName_9">Future Generali Corona Kavach 9.5 Months</span>
+                                                </td><td align="center">
+                                                    <span id="gvTermComparison_lblPremiumRate_9">566.00</span>
+                                                </td><td align="center">
+                                                    <table>
+                                                        <tbody><tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkBrochure_9" href="javascript:__doPostBack('gvTermComparison$ctl11$hlnkBrochure','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkPolicyWording_9" href="javascript:__doPostBack('gvTermComparison$ctl11$hlnkPolicyWording','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkOther_9" href="javascript:__doPostBack('gvTermComparison$ctl11$hlnkOther','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-bottom: unset !important">
+                                                                <a id="gvTermComparison_hlnkClaim_9" href="javascript:__doPostBack('gvTermComparison$ctl11$hlnkClaim','')" style="color:#0099FF;font-weight:bold;text-decoration:underline;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td><td align="center">
+                                                    <input id="gvTermComparison_chkselect_9" type="checkbox" name="gvTermComparison$ctl11$chkselect" onclick="CheckOne(this);">
+                                                </td>
+		</tr><tr align="right" style="background-color:WhiteSmoke;font-size:Large;">
+			<td colspan="5"><table>
+				<tbody><tr>
+					<td><span>1</span></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$2')">2</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$3')">3</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$4')">4</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$5')">5</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$6')">6</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$7')">7</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$8')">8</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$9')">9</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$10')">10</a></td><td><a href="javascript:__doPostBack('gvTermComparison','Page$11')">...</a></td>
+				</tr>
+			</tbody></table></td>
+		</tr>
+	</tbody></table>
+</div>
+                                </div>
+                            </div>
+                        </div>
+
+</section>
+{% endblock body %}
+</body>
+</html>

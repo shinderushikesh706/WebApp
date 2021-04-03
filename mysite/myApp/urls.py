@@ -10,5 +10,6 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('logout', views.Userlogout, name='Userlogout'),
     path('healthinsurance', views.healthinsurance, name='healthinsurance'),
-    path('HealthInsuranceCalculator', views.hicalculator, name='HealthInsuranceCalculator')
+    path('HealthInsuranceCalculator', views.hicalculator, name='HealthInsuranceCalculator'),
+    path('HealthInsuranceCalc', views.HealthInsuranceCalc, name='HealthInsuranceCalc')
 ]
